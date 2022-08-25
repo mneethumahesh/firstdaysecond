@@ -1,6 +1,7 @@
 ﻿// open chrome browser
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools.V102.Target;
 
 IWebDriver driver = new ChromeDriver();
 driver.Manage().Window.Maximize();
@@ -29,7 +30,7 @@ loginButton.Click();
 
 // check if the user has logged in correctly
 
-IWebElement helloHari = driver.FindElement(By.XPath("//*[@id='loginForm']/form/div[3]/input[1]"));
+IWebElement helloHari = driver.FindElement(By.XPath("//*[@id='logoutForm']/ul/li/a"));
 
 
 if (helloHari.Text == "Hello hari!") 
@@ -40,3 +41,6 @@ else
 {
     Console.WriteLine("log in failed");
 }
+
+//create Time and Material
+//create new Time
